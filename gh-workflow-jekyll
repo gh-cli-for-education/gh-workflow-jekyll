@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -e
 
-open $(gh browse -n | sed -ne 's/-source/\/actions/p')
+open $(gh browse -n | sed -nEe 's/-source|$/\/actions/p')
